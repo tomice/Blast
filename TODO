@@ -1,0 +1,10 @@
+TODO
+* Show controls during launch instead of simply in the README
+* Add controller support. Maybe this: https://github.com/joncoop/pygame-xbox360controller
+* Add error handling because this is a bit amateur hour...
+* Add tests because, again, amateur hour
+* Fix clipping on lives and the enemy sprite
+* Add a better background
+* Add barriers akin to Space Invaders
+* Add other enemies and bosses
+* Add scoreboard complete with names of players. Nosql DB maybe?
