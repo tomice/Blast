@@ -4,13 +4,13 @@ from ship import Ship
 
 class Scoreboard():
     """A class for scoring info"""
-    def __init__(self, ai_settings, screen, stats):
+    def __init__(self, blast_settings, screen, stats):
         """Init scorekeeping"""
         self.screen = screen
         self.screen_rect = screen.get_rect()
-        self.ai_settings = ai_settings
+        self.blast_settings = blast_settings
         self.stats = stats
-        self.text_color = (30, 30, 30)
+        self.text_color = (255, 255, 255)
         self.font = pygame.font.SysFont(None, 48)
         self.prep_score()
         self.prep_high_score()
@@ -22,7 +22,7 @@ class Scoreboard():
         rounded_score = int(round(self.stats.score, -1))
         score_str = "{:,}".format(rounded_score)
         self.score_image = self.font.render(score_str, True, self.text_color, 
-            self.ai_settings.bg_color)
+            self.blast_settings.bg_color)
         
         # Display score in upper right
         self.score_rect = self.score_image.get_rect()
@@ -34,7 +34,7 @@ class Scoreboard():
         high_score = int(round(self.stats.high_score, -1))
         high_score_str = "{:,}".format(high_score)
         self.high_score_image = self.font.render(high_score_str, True,
-            self.text_color, self.ai_settings.bg_color)
+            self.text_color, self.blast_settings.bg_color)
         
         # Center high score at top
         self.high_score_rect = self.high_score_image.get_rect()
@@ -44,7 +44,7 @@ class Scoreboard():
     def prep_level(self):
         """Turn level into rendered image"""
         self.level_image = self.font.render(str(self.stats.level), True,
-            self.text_color, self.ai_settings.bg_color)
+            self.text_color, self.blast_settings.bg_color)
         
         # Position level below score
         self.level_rect = self.level_image.get_rect()
@@ -55,7 +55,7 @@ class Scoreboard():
         """Show how many ships are left"""
         self.ships = Group()
         for ship_number in range(self.stats.ships_left):
-            ship = Ship(self.ai_settings, self.screen)
+            ship = Ship(self.blast_settings, self.screen)
             ship.rect.x = 10 + ship_number * ship.rect.width
             ship.rect.y = 10
             self.ships.add(ship)

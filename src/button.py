@@ -2,7 +2,7 @@ import pygame.font
 
 class Button():
     """Display the play button"""
-    def __init__(self, ai_settings, screen, msg):
+    def __init__(self, blast_settings, screen, msg):
         """Init button attributes"""
         self.screen = screen
         self.screen_rect = screen.get_rect()

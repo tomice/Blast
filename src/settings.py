@@ -1,14 +1,14 @@
 class Settings():
-    """Storage class for Alien Invasion settings."""
+    """Storage class for Blast settings."""
     def __init__(self):
         """Init game settings."""
         self.screen_width = 1200
         self.screen_height = 800
-        self.bg_color = (230, 230, 230)
+        self.bg_color = (0, 0, 0)
         self.ship_limit = 3
         self.bullet_width = 3
         self.bullet_height = 15
-        self.bullet_color = 60, 60, 60
+        self.bullet_color = 255, 255, 255
         self.bullets_allowed = 10
         self.fleet_drop_speed = 10
         self.speedup_scale = 1.1

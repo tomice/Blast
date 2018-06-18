@@ -1,10 +1,15 @@
 TODO
 * Show controls during launch instead of simply in the README
-* Add controller support. Maybe this: https://github.com/joncoop/pygame-xbox360controller
+* Add controller support. 
+  - Maybe this: https://github.com/joncoop/pygame-xbox360controller
 * Add error handling because this is a bit amateur hour...
 * Add tests because, again, amateur hour
-* Fix clipping on lives and the enemy sprite
-* Add a better background
+* Fix clipping on lives and the enemy sprite with regards to the top text
 * Add barriers akin to Space Invaders
 * Add other enemies and bosses
 * Add scoreboard complete with names of players. Nosql DB maybe?
+* Image blitting can possibly be done better. BG can be a surface?
+* Improve high score and other assets by encrypting them into binary chunks? 
+  - Is this possible with pygame? Research...
+* Fix audio glitch when music loops
+* Fix the intro music hack. There should be a better way to do this than having a large, looping audio file

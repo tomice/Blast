@@ -1,10 +1,10 @@
 from pathlib import Path
 
 class GameStats():
-    """Track stats for Alien Invasion"""
-    def __init__(self, ai_settings):
+    """Track stats for Blast"""
+    def __init__(self, blast_settings):
         """Init stats"""
-        self.ai_settings = ai_settings
+        self.blast_settings = blast_settings
         self.reset_stats()
         self.game_active = False
         #self.high_score = 0
@@ -12,7 +12,7 @@ class GameStats():
 
     def reset_stats(self):
         """Init stats that change during game"""
-        self.ships_left = self.ai_settings.ship_limit
+        self.ships_left = self.blast_settings.ship_limit
         self.score = 0
         self.level = 1
     
